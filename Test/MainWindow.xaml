@@ -1,11 +1,12 @@
-﻿<Window x:Class="WpfMyTelegramChat.MainWindow"
+﻿<Window x:Class="Test.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfMyTelegramChat"
+       
+        xmlns:local="clr-namespace:Test"
         mc:Ignorable="d"
-        x:Name="mainWindow"
+         x:Name="mainWindow"
         AllowsTransparency="True"
         Background="Transparent"
         Height="650" Width="1020"
@@ -14,11 +15,12 @@
         WindowStartupLocation="CenterScreen">
     <Border 
         CornerRadius="20"
-        Background="WhiteSmoke">
+        Background="White">
 
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
@@ -28,6 +30,7 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
             <Border Background="#E0E1E7"
+                    Grid.Row="0" Margin="0,0,0,10"
                     CornerRadius="20,20,0,0"
                     Grid.ColumnSpan="3"
                     Height="40"
@@ -37,8 +40,25 @@
                 <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FFFBE70B" />
                 <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FF3ED429"/>
             </StackPanel>
-           
+            <TabControl  Grid.Row="0"  Grid.Column="1" Grid.RowSpan="4" Margin="10,14,0,0" BorderBrush="{x:Null}">
+                    <TabItem Background="White" BorderBrush="White">
+                    <TabItem.Header>
+                            <StackPanel Orientation="Horizontal" Width="204" Height="30">
+                            <TextBlock Text="Telegram Web" VerticalAlignment="Center"/>
+                           
+                        </StackPanel>
+                    </TabItem.Header>
+                       
+                </TabItem>
+            </TabControl>
+                   
+                  
+
+
+                    
+                     
 
         </Grid>
     </Border>
+   
 </Window>
