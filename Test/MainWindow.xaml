@@ -44,8 +44,8 @@
                     <TabItem Background="White" BorderBrush="White">
                     <TabItem.Header>
                             <StackPanel Orientation="Horizontal" Width="204" Height="30">
-                            <TextBlock Text="Telegram Web" VerticalAlignment="Center"/>
-                           
+                            <TextBlock Text="Telegram Web" VerticalAlignment="Center" Margin="40,0,0,0"/>
+                            <Image Width="15" Source="/icons8-close-50.png" Margin="60,0,0,0"/>
                         </StackPanel>
                     </TabItem.Header>
                        
