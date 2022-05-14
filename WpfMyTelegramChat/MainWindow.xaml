@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfMyTelegramChat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMyTelegramChat"
+        mc:Ignorable="d"
+        x:Name="mainWindow"
+        AllowsTransparency="True"
+        Background="Transparent"
+        Height="650" Width="1020"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        WindowStartupLocation="CenterScreen">
+    <Border 
+        CornerRadius="20"
+        Background="WhiteSmoke">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Border Background="#E0E1E7"
+                    CornerRadius="20,20,0,0"
+                    Grid.ColumnSpan="3"
+                    Height="40"
+                    MouseDown="Border_MouseDown"/>
+            <StackPanel Orientation="Horizontal">
+                <RadioButton GroupName="Radio" Margin="15,20,0,20" Background="#FFEA1818"/>
+                <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FFFBE70B" />
+                <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FF3ED429"/>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</Window>
