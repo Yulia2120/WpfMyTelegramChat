@@ -7,37 +7,306 @@
         xmlns:local="clr-namespace:WpfMyTelegramChat"
         mc:Ignorable="d"
         x:Name="mainWindow"
-        AllowsTransparency="True"
+         AllowsTransparency="True"
         Background="Transparent"
         Height="650" Width="1020"
         WindowStyle="None"
         ResizeMode="CanResize"
         WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="Image" x:Key="Icon">
+            <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+          
+        </Style>
+    </Window.Resources>
     <Border 
         CornerRadius="20"
-        Background="WhiteSmoke">
+        Background="White">
 
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
-                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
+
             <Border Background="#E0E1E7"
+                    Grid.Row="0" Margin="0,0,0,22"
                     CornerRadius="20,20,0,0"
-                    Grid.ColumnSpan="3"
-                    Height="40"
+                    Height="35"
                     MouseDown="Border_MouseDown"/>
+
             <StackPanel Orientation="Horizontal">
-                <RadioButton GroupName="Radio" Margin="15,20,0,20" Background="#FFEA1818"/>
-                <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FFFBE70B" />
-                <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FF3ED429"/>
+                <RadioButton GroupName="Radio" Margin="15,10,0,0" Background="#FFEA1818"/>
+                <RadioButton GroupName="Radio" Margin="4,10,0,0" Background="#FFFBE70B" />
+                <RadioButton GroupName="Radio" Margin="4,10,0,0" Background="#FF3ED429" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
             </StackPanel>
+
+            <TabControl  Grid.Row="0" BorderBrush="White">
+                <TabItem Background="White" BorderBrush="White" Margin="80,5,0,0">
+                    <TabItem.Header>
+                        <StackPanel Orientation="Horizontal" Width="294" Height="25">
+                            <Image Style="{StaticResource Icon}" Width="20" Source="images/icons8-telegram-app-48.png"/>
+                            <TextBlock Text="Telegram Web" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                            <Image Style="{StaticResource Icon}" Width="10" Source="images/close-30.png" Margin="100,0,0,0"/>
+                        </StackPanel>
+                    </TabItem.Header>
+
+                    <DockPanel Height="20" VerticalAlignment="Top" Margin="5,2,0,0">
+                        <Image Style="{StaticResource Icon}" Width="15" Height="15" Source="images/-left-50.png" />
+                        <Image Style="{StaticResource Icon}" Width="15" Height="15" Source="images/right-50.png" Margin="10,0,0,0"/>
+                        <Image  Style="{StaticResource Icon}" Width="10" Height="10" Source="images/reboot-50.png" Margin="10,0,0,0"/>
+                        <Border Width="860" Height="20" HorizontalAlignment="Center"
+                                Background="#FFF2F3F7" CornerRadius="14"
+                                Margin="10,0,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Style="{StaticResource Icon}" Width="16" Height="16" Source="images/icons8-telegram-app-48.png" Margin="5,0,0,0"/>
+                                <TextBox Text="https://" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Foreground="#FFADABAB" />
+                                <TextBox Text="web.telegram.org" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Foreground="Black" Margin="-5,0,0,0"/>
+                                <TextBox Text="/" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Foreground="#FFADABAB" Margin="-5,0,0,0"/>
+                                <Image Style="{StaticResource Icon}" Width="15" Height="15" Source="images/cancel-24.png" Margin="674,0,0,0"/>
+                            </StackPanel>
+                        </Border>
+                        <Image Style="{StaticResource Icon}" Width="16" Height="16" Source="images/male-user-24.png" Margin="15,0,0,0"/>
+                        <Image Style="{StaticResource Icon}" Width="16" Height="16" Source="images/-menu-vertical-50.png" Margin="15,0,0,0"/>
+                    </DockPanel>
+                </TabItem>
+            </TabControl>
+            <StackPanel Grid.Row="1" >
+                <Border Background="#FFE0DFDF" Width="1020" 
+                                Height="2" Margin="0,2,0,0"/>
+            </StackPanel>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0" Style="{StaticResource Icon}" Width="20" Height="20" Source="images/menu-50.png" Margin="20,0,0,0" HorizontalAlignment="Center"/>
+
+                <Border Grid.Column="1" Width="260" Height="35" 
+                                Background="#FFF2F3F7" CornerRadius="20"
+                                Margin="20,10,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Style="{StaticResource Icon}" Width="15" Height="15" Source="images/search-50.png" Margin="10,0,0,0"/>
+                        <TextBox Background="{x:Null}" BorderBrush="{x:Null}" Text="Search" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+
+                <StackPanel Grid.Column="2">
+                    <Border Height="40" Width="2" Background="#FFE0DFDF" Margin="20,5,0,0" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <ListBox Grid.Column="0" BorderBrush="{x:Null}">
+                    <ListBoxItem>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Style="{StaticResource Icon}" Width="45" Height="45" Source="images/-favorites-50.png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Style="{StaticResource Icon}" Width="45" Height="45" Source="images/avatar (7).png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+                    
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Style="{StaticResource Icon}" Width="45" Height="45" Source="images/avatar (1).png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Style="{StaticResource Icon}" Width="45" Height="45" Source="images/avatar (10).png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Style="{StaticResource Icon}" Width="45" Height="45" Source="images/avatar (6).png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Style="{StaticResource Icon}" Width="45" Height="45" Source="images/avatar (9).png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Style="{StaticResource Icon}" Width="45" Height="45" Source="images/avatar (4).png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Style="{StaticResource Icon}" Width="45" Height="45" Source="images/avatar (3).png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Style="{StaticResource Icon}" Width="45" Height="45" Source="images/avatar (2).png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Style="{StaticResource Icon}" Width="45" Height="45" Source="images/avatar (8).png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+
+                </ListBox>
+                <StackPanel Grid.Column="1">
+                    <Image Source="images/Background1.png"/>
+                </StackPanel>
+            </Grid>
 
 
         </Grid>

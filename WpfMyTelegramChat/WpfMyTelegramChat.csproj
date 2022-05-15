@@ -92,7 +92,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -105,7 +105,67 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <Resource Include="images\icons8-telegram-app-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\close-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\-left-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\right-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\reboot-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cancel-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\male-user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\-menu-vertical-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\menu-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\search-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\-favorites-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\avatar %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\avatar %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\avatar %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\avatar %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\avatar %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\avatar %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\avatar %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\avatar %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\avatar %288%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />

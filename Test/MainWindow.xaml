@@ -24,16 +24,8 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
-                <!--<RowDefinition/>-->
             </Grid.RowDefinitions>
-            <!--<Grid.ColumnDefinitions>
-                -->
-            <!--<ColumnDefinition Width="Auto"/>-->
-            <!--
-            </Grid.ColumnDefinitions>-->
-
-
-
+            
             <Border Background="#E0E1E7"
                     Grid.Row="0" Margin="0,0,0,22"
                     CornerRadius="20,20,0,0"
@@ -72,7 +64,7 @@
                             </StackPanel>
                         </Border>
                         <Image Width="16" Height="16" Source="images/icons8-male-user-24.png" Margin="15,0,0,0"/>
-                        <Image Width="16" Height="16" Source="images/icons8-menu-vertical-50.png" Margin="15,0,0,0"/>
+                        <Image Width="16" Height="16" Source="images/-menu-vertical-50.png" Margin="15,0,0,0"/>
                     </DockPanel>
                 </TabItem>
             </TabControl>
@@ -116,11 +108,10 @@
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <!--<Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>-->
-                            <Image Grid.Column="0" Width="40" Height="40" Source="/icons8-happy-50.png"/>
+
+                            <Image Grid.Column="0" Width="45" Height="45" Source="/-favorites-50.png"/>
+
+
                             <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
                                 <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
                                 <TextBlock Text="Eat samesing!"/>
@@ -140,7 +131,7 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                      
-                            <Image Grid.Column="0" Width="40" Height="40" Source="/icons8-happy-50.png"/>
+                            <Image Grid.Column="0" Width="45" Height="45" Source="/happy-50.png"/>
                             <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
                                 <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
                                 <TextBlock Text="Eat samesing!"/>
@@ -159,7 +150,7 @@
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
 
-                            <Image Grid.Column="0" Width="40" Height="40" Source="/icons8-happy-50.png"/>
+                            <Image Grid.Column="0" Width="45" Height="45" Source="/happy-50.png"/>
                             <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
                                 <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
                                 <TextBlock Text="Eat samesing!"/>
@@ -170,8 +161,10 @@
                             </StackPanel>
                         </Grid>
                     </ListBoxItem>
-
                 </ListBox>
+                <StackPanel Grid.Column="1">
+                    <Image Source="/Background1.png"/>
+                </StackPanel>
             </Grid>
 
 
