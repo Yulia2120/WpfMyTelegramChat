@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Test"
         mc:Ignorable="d"
          x:Name="mainWindow"
-      
+   
         AllowsTransparency="True"
         Background="Transparent"
         Height="650" Width="1020"
@@ -107,10 +107,71 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition/>
-                </Grid.ColumnDefinitions> 
+                </Grid.ColumnDefinitions>
+                <ListBox Grid.Column="0" BorderBrush="{x:Null}">
+                <ListBoxItem>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <!--<Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>-->
+                            <Image Grid.Column="0" Width="40" Height="40" Source="/icons8-happy-50.png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                </ListBoxItem>
 
-<!--<L-->
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                     
+                            <Image Grid.Column="0" Width="40" Height="40" Source="/icons8-happy-50.png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+                    <ListBoxItem Margin="0,5,0,0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
 
+                            <Image Grid.Column="0" Width="40" Height="40" Source="/icons8-happy-50.png"/>
+                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="10,0,0,0">
+                                <TextBlock Text="Saved Messages" Margin="0,5,0,0"/>
+                                <TextBlock Text="Eat samesing!"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Margin="160,0,0,0">
+                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="@"/>
+                            </StackPanel>
+                        </Grid>
+                    </ListBoxItem>
+
+                </ListBox>
             </Grid>
 
 
