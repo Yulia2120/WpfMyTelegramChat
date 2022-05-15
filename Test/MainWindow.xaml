@@ -7,12 +7,14 @@
         xmlns:local="clr-namespace:Test"
         mc:Ignorable="d"
          x:Name="mainWindow"
+      
         AllowsTransparency="True"
         Background="Transparent"
         Height="650" Width="1020"
         WindowStyle="None"
         ResizeMode="CanResize"
         WindowStartupLocation="CenterScreen">
+       
     <Border 
         CornerRadius="20"
         Background="White">
@@ -40,25 +42,31 @@
                 <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FFFBE70B" />
                 <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FF3ED429"/>
             </StackPanel>
-            <TabControl  Grid.Row="0"  Grid.Column="1" Grid.RowSpan="4" Margin="10,14,0,0" BorderBrush="{x:Null}">
-                    <TabItem Background="White" BorderBrush="White">
+
+            <TabControl  Grid.Row="0"  Grid.Column="0" Grid.RowSpan="4" Margin="5,12,0,0" BorderBrush="{x:Null}">
+                <TabItem Background="White" BorderBrush="{x:Null}" Margin="70,0,-12,0">
                     <TabItem.Header>
-                            <StackPanel Orientation="Horizontal" Width="204" Height="30">
-                            <TextBlock Text="Telegram Web" VerticalAlignment="Center" Margin="40,0,0,0"/>
-                            <Image Width="15" Source="/icons8-close-50.png" Margin="60,0,0,0"/>
+                        <StackPanel Orientation="Horizontal" Width="274" Height="25">
+                            <Image Width="20" Source="images/icons8-telegram-app-48.png"  RenderOptions.BitmapScalingMode="Fant"/>
+                            <TextBlock Text="Telegram Web" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                            <Image Width="10" Source="images/icons8-close-30.png" Margin="100,0,0,0"  RenderOptions.BitmapScalingMode="Fant"/>
                         </StackPanel>
                     </TabItem.Header>
-                       
+
                 </TabItem>
-            </TabControl>
-                   
-                  
-
-
+                <StackPanel>
                     
-                     
+                </StackPanel>
+
+            </TabControl>
+
+
+
+
+
+
 
         </Grid>
     </Border>
-   
+
 </Window>

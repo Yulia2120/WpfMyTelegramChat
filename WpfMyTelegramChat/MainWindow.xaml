@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ma="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:WpfMyTelegramChat"
         mc:Ignorable="d"
         x:Name="mainWindow"
@@ -37,7 +38,7 @@
                 <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FFFBE70B" />
                 <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FF3ED429"/>
             </StackPanel>
-           
+
 
         </Grid>
     </Border>
