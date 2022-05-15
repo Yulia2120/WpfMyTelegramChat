@@ -14,7 +14,7 @@
         WindowStyle="None"
         ResizeMode="CanResize"
         WindowStartupLocation="CenterScreen">
-       
+
     <Border 
         CornerRadius="20"
         Background="White">
@@ -22,48 +22,96 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <!--<RowDefinition/>-->
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
+            <!--<Grid.ColumnDefinitions>
+                -->
+            <!--<ColumnDefinition Width="Auto"/>-->
+            <!--
+            </Grid.ColumnDefinitions>-->
+
+
+
             <Border Background="#E0E1E7"
-                    Grid.Row="0" Margin="0,0,0,10"
+                    Grid.Row="0" Margin="0,0,0,22"
                     CornerRadius="20,20,0,0"
-                    Grid.ColumnSpan="3"
-                    Height="40"
+                    Height="35"
                     MouseDown="Border_MouseDown"/>
+
             <StackPanel Orientation="Horizontal">
-                <RadioButton GroupName="Radio" Margin="15,20,0,20" Background="#FFEA1818"/>
-                <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FFFBE70B" />
-                <RadioButton GroupName="Radio" Margin="4,20,0,20" Background="#FF3ED429"/>
+                <RadioButton GroupName="Radio" Margin="15,10,0,0" Background="#FFEA1818"/>
+                <RadioButton GroupName="Radio" Margin="4,10,0,0" Background="#FFFBE70B" />
+                <RadioButton GroupName="Radio" Margin="4,10,0,0" Background="#FF3ED429" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
             </StackPanel>
 
-            <TabControl  Grid.Row="0"  Grid.Column="0" Grid.RowSpan="4" Margin="5,12,0,0" BorderBrush="{x:Null}">
-                <TabItem Background="White" BorderBrush="{x:Null}" Margin="70,0,-12,0">
+            <TabControl  Grid.Row="0" BorderBrush="White">
+                <TabItem Background="White" BorderBrush="White" Margin="80,5,0,0">
                     <TabItem.Header>
-                        <StackPanel Orientation="Horizontal" Width="274" Height="25">
+                        <StackPanel Orientation="Horizontal" Width="294" Height="25">
                             <Image Width="20" Source="images/icons8-telegram-app-48.png"  RenderOptions.BitmapScalingMode="Fant"/>
                             <TextBlock Text="Telegram Web" VerticalAlignment="Center" Margin="10,0,0,0"/>
                             <Image Width="10" Source="images/icons8-close-30.png" Margin="100,0,0,0"  RenderOptions.BitmapScalingMode="Fant"/>
                         </StackPanel>
                     </TabItem.Header>
 
+                    <DockPanel Height="20" VerticalAlignment="Top" Margin="5,2,0,0">
+                        <Image Width="15" Height="15" Source="images/icons8-left-50.png" />
+                        <Image Width="15" Height="15" Source="images/icons8-right-50.png" Margin="10,0,0,0"/>
+                        <Image Width="10" Height="10" Source="images/icons8-reboot-50.png"   RenderOptions.BitmapScalingMode="Fant" Margin="10,0,0,0"/>
+                        <Border Width="860" Height="20" HorizontalAlignment="Center"
+                                Background="#FFF2F3F7" CornerRadius="14"
+                                Margin="10,0,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Width="16" Height="16" Source="images/icons8-telegram-app-48.png" RenderOptions.BitmapScalingMode="Fant" Margin="5,0,0,0"/>
+                                <TextBox Text="https://" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Foreground="#FFADABAB" />
+                                <TextBox Text="web.telegram.org" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Foreground="Black" Margin="-5,0,0,0"/>
+                                <TextBox Text="/" Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Foreground="#FFADABAB" Margin="-5,0,0,0"/>
+                                <Image Width="15" Height="15" Source="images/icons8-cancel-24.png" Margin="674,0,0,0"/>
+                            </StackPanel>
+                        </Border>
+                        <Image Width="16" Height="16" Source="images/icons8-male-user-24.png" Margin="15,0,0,0"/>
+                        <Image Width="16" Height="16" Source="images/icons8-menu-vertical-50.png" Margin="15,0,0,0"/>
+                    </DockPanel>
                 </TabItem>
-                <StackPanel>
-                    
-                </StackPanel>
-
             </TabControl>
+            <StackPanel Grid.Row="1" >
+                <Border Background="#FFE0DFDF" Width="1020" 
+                                Height="2" Margin="0,2,0,0"/>
+            </StackPanel>
 
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
 
+                <Image Grid.Column="0" Width="20" Height="20" Source="images/icons8-menu-50.png" Margin="20,0,0,0" HorizontalAlignment="Center"/>
 
+                <Border Grid.Column="1" Width="260" Height="35" 
+                                Background="#FFF2F3F7" CornerRadius="20"
+                                Margin="20,10,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="15" Height="15" Source="images/icons8-search-50.png" Margin="10,0,0,0"/>
+                        <TextBox Background="{x:Null}" BorderBrush="{x:Null}" Text="Search" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
 
+                <StackPanel Grid.Column="2">
+                    <Border Height="40" Width="2" Background="#FFE0DFDF" Margin="20,5,0,0" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions> 
 
+<!--<L-->
+
+            </Grid>
 
 
         </Grid>

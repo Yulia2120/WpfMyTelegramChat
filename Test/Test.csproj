@@ -116,6 +116,30 @@
   <ItemGroup>
     <Resource Include="images\icons8-telegram-app-48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons8-reboot-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons8-left-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons8-right-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons8-cancel-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons8-male-user-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons8-menu-vertical-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons8-menu-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons8-search-50.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
