@@ -18,18 +18,21 @@
             <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
             <Setter Property="Width" Value="35"/>
             <Setter Property="Height" Value="35"/>
-            <Setter Property="Margin" Value="10,0,0,5"/>
+            <Setter Property="Margin" Value="5,0,0,5"/>
         </Style>
         <Style TargetType="TextBlock" x:Key="Ava">
-            <Setter Property="FontFamily" Value="Corbel"/>
-            <Setter Property="FontSize" Value="10"/>
-            <Setter Property="FontWeight" Value="ExtraBold"/>
+            <Setter Property="FontFamily" Value="Arial Black"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="FontWeight" Value="Regular"/>
         </Style>
         <Style TargetType="TextBlock" x:Key="sub">
-            <Setter Property="FontFamily" Value="Corbel"/>
+            <Setter Property="FontFamily" Value="Arial"/>
             <Setter Property="FontSize" Value="10"/>
             <Setter Property="Foreground" Value="Gray"/>
         </Style>
+        <!--<Style TargetType="TextBlock" x:Key="clock">
+            <Setter Property="FontFamily" Value="Arial"/>
+        </Style>-->
     </Window.Resources>
     <Border 
         CornerRadius="20"
@@ -41,6 +44,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
+             
 
             <Border Background="#E0E1E7"
                     Grid.Row="0" Margin="0,0,0,22"
@@ -86,7 +90,7 @@
             </TabControl>
             <StackPanel Grid.Row="1" >
                 <Border Background="#FFE0DFDF" Width="1020" 
-                                Height="2" Margin="0,2,0,0"/>
+                                Height="1" Margin="0,1,0,0"/>
             </StackPanel>
 
             <Grid Grid.Row="1">
@@ -103,13 +107,27 @@
                                 Margin="20,5,0,0">
                     <StackPanel Orientation="Horizontal">
                         <Image Style="{StaticResource Icon}" Width="15" Height="15" Source="images/search-50.png" Margin="10,0,0,0"/>
-                        <TextBox Background="{x:Null}" BorderBrush="{x:Null}" Text="Search" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                        <TextBox Background="{x:Null}" BorderBrush="{x:Null}" Text="Search" Margin="10,0,0,0" VerticalAlignment="Center" Foreground="Gray"/>
                     </StackPanel>
                 </Border>
 
                 <StackPanel Grid.Column="2">
-                    <Border Height="40" Width="2" Background="#FFE0DFDF" Margin="15,5,0,0" HorizontalAlignment="Left"/>
+                    <Border Height="44" Width="1" Background="#FFE0DFDF" Margin="15,2,0,0" HorizontalAlignment="Left"/>
                 </StackPanel>
+                <Image Grid.Column="2" Source="images/avatar (10).png" Width="35" Height="35" HorizontalAlignment="Left" Margin="35,5,0,5"/>
+                <StackPanel Grid.Column="2" Margin="75,10,0,0">
+                <TextBlock Text="Campus Party" Style="{StaticResource Ava}"  VerticalAlignment="Center" />
+                <TextBlock Text="2,500 members, 746 online" Style="{StaticResource sub}"  VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                <Border Height="30" Width="2" Background="#9FC9E0" Margin="195,10,0,0"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Vertical" VerticalAlignment="Center" Margin="450,0,0,0"  >
+                    <TextBlock Text="Pinned message" FontFamily="Arial" Foreground="#9FC9E0" FontSize="10"/>
+                    <TextBlock Text="See you tomorrow at 18:00..." FontSize="10" FontFamily="Arial" FontWeight="Regular"/>
+                </StackPanel>
+                <Image Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Width="15" Height="15" Source="images/search-50.png" Margin="0,0,80,0" RenderOptions.BitmapScalingMode="Fant"/>
+                <Image Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Width="15" Height="15" Source="images/-menu-vertical-50.png" Margin="0,0,40,0" RenderOptions.BitmapScalingMode="Fant"/>
             </Grid>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
@@ -131,7 +149,7 @@
                                 <TextBlock Text="Eat samesing!" Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="19:25" Margin="0,5,0,0"/>
+                                <TextBlock Text="19:25" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
@@ -151,7 +169,7 @@
                                 <TextBlock Text="Bob says hi."  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="13:02" Margin="0,5,0,0"/>
+                                <TextBlock Text="13:02" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
@@ -171,7 +189,7 @@
                                 <TextBlock Text="Say hello to Alice"  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="21:48" Margin="0,5,0,0"/>
+                                <TextBlock Text="21:48" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
@@ -190,7 +208,7 @@
                                 <TextBlock Text="Denny:Waw,almost 2,500 members"  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="16:38" Margin="0,5,0,0"/>
+                                <TextBlock Text="16:38" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
@@ -210,7 +228,7 @@
                                 <TextBlock Text="Seville"  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="16:11" Margin="0,5,0,0"/>
+                                <TextBlock Text="16:11" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
@@ -229,7 +247,7 @@
                                 <TextBlock Text="Video"  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="14:50" Margin="0,5,0,0"/>
+                                <TextBlock Text="14:50" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
@@ -249,7 +267,7 @@
                                 <TextBlock Text="I got the job at NASA!"  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="14:44" Margin="0,5,0,0"/>
+                                <TextBlock Text="14:44" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
@@ -269,7 +287,7 @@
                                 <TextBlock Text="I dont remember anything"  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="14:20" Margin="0,5,0,0"/>
+                                <TextBlock Text="14:20" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
@@ -289,7 +307,7 @@
                                 <TextBlock Text="Denny:Meet you at the beach"  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="11:00" Margin="0,5,0,0"/>
+                                <TextBlock Text="11:00" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
@@ -308,7 +326,7 @@
                                 <TextBlock Text="typing..."  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="10:34" Margin="0,5,0,0"/>
+                                <TextBlock Text="10:34" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
@@ -328,15 +346,48 @@
                                 <TextBlock Text="Washington D.C."  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
-                                <TextBlock Text="10:44" Margin="0,5,0,0"/>
+                                <TextBlock Text="10:44" Margin="0,5,0,0" Style="{StaticResource sub}"/>
                                 <TextBlock Text="@"/>
                             </StackPanel>
                         </Grid>
                     </ListBoxItem>
                 </ListBox>
                 <StackPanel Grid.Column="1">
-                    <Image Source="images/Background1.png"/>
+                    <Image Source="images/Background1.png" Stretch="Fill"/>
                 </StackPanel>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.6*"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                <!--<StackPanel Grid.Column="1" Orientation="Vertical" Margin="0,25,0,0">-->
+                    <Border Grid.Column="1" Width="230" Height="200" Background="White" CornerRadius="10" Margin="0,20,0,0"/>
+                    <Grid Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Height="155" Width="2" Background="#9FC9E0" Margin="25,50,0,0"/>
+                        <StackPanel Grid.Column="1" Margin="0,20,25,10">
+                        <TextBlock Text="Monica"/>
+                        <TextBlock Text="https://www.forbes.com/4dfe050cle62"/>
+                        <Image Width="210" Height="70" Margin="5,0,0,0" Source="images/tg_image_340.png"/>
+                        <TextBlock Text="Forbes" Margin="5,0,0,0"/>
+                        <TextBlock Text="The New Campus Deplorables" Margin="5,0,0,0"/>
+                        <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis." Margin="5,0,0,0" TextWrapping="Wrap"/>
+
+
+                        </StackPanel>
+                    </Grid>
+
+                    <!--</StackPanel>-->
+                    </Grid>
             </Grid>
 
 
