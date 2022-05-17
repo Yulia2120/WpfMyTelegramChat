@@ -10,9 +10,9 @@
          AllowsTransparency="True"
         Background="Transparent"
         Height="650" Width="1020"
-        WindowStyle="None"
-        ResizeMode="CanResize"
-        WindowStartupLocation="CenterScreen">
+        WindowStyle="None">
+
+   
     <Window.Resources>
         <Style TargetType="Image" x:Key="Icon">
             <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
@@ -21,7 +21,7 @@
             <Setter Property="Margin" Value="5,0,0,5"/>
         </Style>
         <Style TargetType="TextBlock" x:Key="Ava">
-            <Setter Property="FontFamily" Value="Arial Black"/>
+            <Setter Property="FontFamily" Value="Arial Rounded MT Bold"/>
             <Setter Property="FontSize" Value="11"/>
             <Setter Property="FontWeight" Value="Regular"/>
         </Style>
@@ -30,9 +30,17 @@
             <Setter Property="FontSize" Value="10"/>
             <Setter Property="Foreground" Value="Gray"/>
         </Style>
-        <!--<Style TargetType="TextBlock" x:Key="clock">
+        <Style TargetType="TextBlock" x:Key="blue">
             <Setter Property="FontFamily" Value="Arial"/>
-        </Style>-->
+            <Setter Property="Foreground" Value="#9FC9E0"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style TargetType="TextBlock" x:Key="text">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="9"/>
+            
+        </Style>
     </Window.Resources>
     <Border 
         CornerRadius="20"
@@ -50,7 +58,7 @@
                     Grid.Row="0" Margin="0,0,0,22"
                     CornerRadius="20,20,0,0"
                     Height="35"
-                    MouseDown="Border_MouseDown"/>
+                    />
 
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="Radio" Margin="15,10,0,0" Background="#FFEA1818"/>
@@ -58,7 +66,7 @@
                 <RadioButton GroupName="Radio" Margin="4,10,0,0" Background="#FF3ED429" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
             </StackPanel>
 
-            <TabControl  Grid.Row="0" BorderBrush="White">
+            <TabControl  Grid.Row="0" BorderBrush="White" MouseDown="TabControl_MouseDown">
                 <TabItem Background="White" BorderBrush="White" Margin="80,5,0,0">
                     <TabItem.Header>
                         <StackPanel Orientation="Horizontal" Width="274" Height="25">
@@ -102,7 +110,7 @@
 
                 <Image Grid.Column="0"  Width="15" Height="15" Source="images/menu-50.png" Margin="20,0,0,0" HorizontalAlignment="Center" RenderOptions.BitmapScalingMode="Fant"/>
 
-                <Border Grid.Column="1" Width="270" Height="30" 
+                <Border Grid.Column="1" Width="230" Height="30" 
                                 Background="#FFF2F3F7" CornerRadius="15"
                                 Margin="20,5,0,0">
                     <StackPanel Orientation="Horizontal">
@@ -112,18 +120,18 @@
                 </Border>
 
                 <StackPanel Grid.Column="2">
-                    <Border Height="44" Width="1" Background="#FFE0DFDF" Margin="15,2,0,0" HorizontalAlignment="Left"/>
+                    <Border Height="44" Width="1" Background="#FFE0DFDF" Margin="5,2,0,0" HorizontalAlignment="Left"/>
                 </StackPanel>
-                <Image Grid.Column="2" Source="images/avatar (10).png" Width="35" Height="35" HorizontalAlignment="Left" Margin="35,5,0,5"/>
-                <StackPanel Grid.Column="2" Margin="75,10,0,0">
+                <Image Grid.Column="2" Source="images/avatar (10).png" Width="35" Height="35" HorizontalAlignment="Left" Margin="20,5,0,5"/>
+                <StackPanel Grid.Column="2" Margin="60,10,0,0">
                 <TextBlock Text="Campus Party" Style="{StaticResource Ava}"  VerticalAlignment="Center" />
                 <TextBlock Text="2,500 members, 746 online" Style="{StaticResource sub}"  VerticalAlignment="Center" />
                 </StackPanel>
                 <StackPanel Grid.Column="2">
-                <Border Height="30" Width="2" Background="#9FC9E0" Margin="195,10,0,0"/>
+                <Border Height="30" Width="2" Background="#9FC9E0" Margin="155,10,0,0"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2" Orientation="Vertical" VerticalAlignment="Center" Margin="450,0,0,0"  >
-                    <TextBlock Text="Pinned message" FontFamily="Arial" Foreground="#9FC9E0" FontSize="10"/>
+                    <TextBlock Style="{StaticResource blue}" Text="Pinned message"/>
                     <TextBlock Text="See you tomorrow at 18:00..." FontSize="10" FontFamily="Arial" FontWeight="Regular"/>
                 </StackPanel>
                 <Image Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Width="15" Height="15" Source="images/search-50.png" Margin="0,0,80,0" RenderOptions.BitmapScalingMode="Fant"/>
@@ -131,7 +139,7 @@
             </Grid>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="340"/>
+                    <ColumnDefinition Width="290"/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <ListBox Grid.Column="0" BorderBrush="{x:Null}">
@@ -140,7 +148,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/-favorites-50.png"/>
@@ -160,7 +168,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar (7).png"/>
@@ -180,7 +188,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar (1).png"/>
@@ -199,7 +207,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar (10).png"/>
@@ -219,7 +227,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar (6).png"/>
@@ -238,7 +246,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar (9).png"/>
@@ -258,7 +266,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar (4).png"/>
@@ -278,7 +286,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar (3).png"/>
@@ -298,7 +306,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar (2).png"/>
@@ -317,7 +325,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar (8).png"/>
@@ -337,7 +345,7 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
-                                <ColumnDefinition Width="115"/>
+                                <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
 
                             <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar1.png"/>
@@ -357,37 +365,69 @@
                 </StackPanel>
                 <Grid Grid.Column="1">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.6*"/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition Width="0.3*"/>
+                        <ColumnDefinition Width="0.2*"/>
+                        <ColumnDefinition Width="0.9*"/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"/>
-                        <RowDefinition/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                <!--<StackPanel Grid.Column="1" Orientation="Vertical" Margin="0,25,0,0">-->
-                    <Border Grid.Column="1" Width="230" Height="200" Background="White" CornerRadius="10" Margin="0,20,0,0"/>
-                    <Grid Grid.Column="1">
+
+                    <Border Grid.Column="2" Width="220" Height="180" Background="White" 
+                            CornerRadius="10,10,10,0" Margin="0,20,35,0">
+                    <Grid Grid.Column="2">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
-                        <Border Grid.Column="0" Height="155" Width="2" Background="#9FC9E0" Margin="25,50,0,0"/>
-                        <StackPanel Grid.Column="1" Margin="0,20,25,10">
-                        <TextBlock Text="Monica"/>
-                        <TextBlock Text="https://www.forbes.com/4dfe050cle62"/>
-                        <Image Width="210" Height="70" Margin="5,0,0,0" Source="images/tg_image_340.png"/>
-                        <TextBlock Text="Forbes" Margin="5,0,0,0"/>
-                        <TextBlock Text="The New Campus Deplorables" Margin="5,0,0,0"/>
-                        <TextBlock Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis." Margin="5,0,0,0" TextWrapping="Wrap"/>
+                       
+                        <Border Grid.Column="0" Height="140" Width="2" Background="#9FC9E0" Margin="5,20,0,0"/>
+                        <StackPanel Grid.Column="1">
+                            <TextBlock Style="{StaticResource blue}" Text="Monica" Margin="0,5,0,0"/>
+                            <TextBlock Style="{StaticResource blue}" Text="https://www.forbes.com/4dfe050cle62" Margin="0,0,0,0"/>
+                            <Image Width="200" Height="70" Source="images/tg_image_340.png" Margin="0,0,10,0" />
+                            <TextBlock Style="{StaticResource blue}" Text="Forbes" Margin="5,0,0,0"/>
+                            <TextBlock Style="{StaticResource Ava}" Text="The New Campus Deplorables" Margin="5,0,0,0"/>
 
-
+                            <TextBlock Style="{StaticResource text}" Margin="5,0,5,0" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, uis nostrud exercitation ullamco laboris." TextWrapping="Wrap"/>
+                            <TextBlock Style="{StaticResource sub}" Text="16:38" HorizontalAlignment="Right" Margin="0,0,5,0"/>
                         </StackPanel>
+                       
                     </Grid>
-
-                    <!--</StackPanel>-->
-                    </Grid>
+                    </Border>
+                        <Image Grid.Row="0" Grid.Column="1" Width="25" Height="25" Source="images/avatar (2).png"  VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+                        <Border Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3" Margin="100,0,0,0"  Width="210" Height="35" CornerRadius="10,10,0,10" Background="#EDFFD9">
+                        <StackPanel>
+                        <TextBlock  Style="{StaticResource text}" Margin="5,5,20,0" Text="Hello! Does anyone have a photo of party balloons?" TextWrapping="Wrap" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                        <TextBlock Style="{StaticResource sub}" Text="16:38" Margin="0,0,5,0" HorizontalAlignment="Right"/>
+                    </StackPanel>
+                    </Border>
+                    <Border Grid.Row="2" Grid.Column="2" Width="260" Height="185" Background="White" CornerRadius="10,10,10,0" Margin="0,5,0,45">
+                        <StackPanel Orientation="Vertical">
+                            <Image Source="images/tg_image_3974800999-1024x640.png" Width="270" Height="160" Stretch="UniformToFill"/>
+                            <TextBlock Text="Hold on, here it is." Margin="5,0,0,0"/>
+                            <TextBlock Text="16:38" HorizontalAlignment="Right" Margin="0,-10,10,0" />
+                        </StackPanel>
+                    </Border>
+                    <Image Grid.Row="2" Grid.Column="1" Width="25" Height="25" Source="images/avatar (7).png"  HorizontalAlignment="Right" Margin="0,130,0,0"/>
+                    <Border Grid.Column="3" Grid.Row="2" Width="120" Height="50" Margin="40,0" CornerRadius="10,10,0,10"
+                            Background="#EDFFD9" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+                        <StackPanel Orientation="Horizontal">
+                            <Border Width="2" Height="20" Background="#8AB87C" Margin="5,0,0,10"/>
+                            <Image Source="images/1.JPG" Width="23" Height="23" Margin="1,0,0,10"/>
+                        </StackPanel>
+                    </Border>
+                    <Border Grid.Column="2" Grid.Row="3" Width="180" Height="30" Background="White" CornerRadius="10,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                    </Border>
+                    <Image Grid.Row="3" Grid.Column="1" Width="25" Height="25" Source="images/avatar (8).png" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,10,5,0"/>
+                    <Border Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4"  Width="300" Height="30" Background="White" CornerRadius="10,10,0,10" Margin="0,30,290,0">
+                        
+                    </Border>  
+                </Grid>
             </Grid>
 
 

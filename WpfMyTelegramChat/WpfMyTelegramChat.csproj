@@ -138,9 +138,6 @@
     <Resource Include="images\-favorites-50.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\Background1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="images\avatar %287%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -172,6 +169,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\tg_image_340.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\tg_image_3974800999-1024x640.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\1.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
