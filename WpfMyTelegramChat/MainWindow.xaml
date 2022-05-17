@@ -52,13 +52,13 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-             
+
 
             <Border Background="#E0E1E7"
                     Grid.Row="0" Margin="0,0,0,22"
-                    CornerRadius="20,20,0,0"
                     Height="35"
-                    />
+            CornerRadius="20,20,0,0"/>
+
 
             <StackPanel Orientation="Horizontal">
                 <RadioButton GroupName="Radio" Margin="15,10,0,0" Background="#FFEA1818"/>
@@ -128,9 +128,9 @@
                 <TextBlock Text="2,500 members, 746 online" Style="{StaticResource sub}"  VerticalAlignment="Center" />
                 </StackPanel>
                 <StackPanel Grid.Column="2">
-                <Border Height="30" Width="2" Background="#9FC9E0" Margin="155,10,0,0"/>
+                <Border Height="30" Width="2" Background="#9FC9E0" Margin="230,10,0,0"/>
                 </StackPanel>
-                <StackPanel Grid.Column="2" Orientation="Vertical" VerticalAlignment="Center" Margin="450,0,0,0"  >
+                <StackPanel Grid.Column="2" Orientation="Vertical" VerticalAlignment="Center" Margin="490,0,0,0"  >
                     <TextBlock Style="{StaticResource blue}" Text="Pinned message"/>
                     <TextBlock Text="See you tomorrow at 18:00..." FontSize="10" FontFamily="Arial" FontWeight="Regular"/>
                 </StackPanel>
@@ -144,7 +144,8 @@
                 </Grid.ColumnDefinitions>
                 <ListBox Grid.Column="0" BorderBrush="{x:Null}">
                     <ListBoxItem>
-                        <Grid>
+                        <StackPanel Margin="0,5,0,0">
+                            <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
@@ -158,13 +159,15 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="19:25" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                                <Image Width="20" Height="20" Source="images/5.JPG" Stretch="Uniform"  />
                             </StackPanel>
                         </Grid>
+                            </StackPanel>
                     </ListBoxItem>
 
-                    <ListBoxItem Margin="0,5,0,0">
-                        <Grid>
+                    <ListBoxItem>
+                        <StackPanel Margin="0,5,0,0">
+                            <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
@@ -178,13 +181,15 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="13:02" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                                <Image Width="20" Height="20" Source="images/6.JPG"/>
                             </StackPanel>
                         </Grid>
+                            </StackPanel>
                     </ListBoxItem>
                     
-                    <ListBoxItem Margin="0,5,0,0">
-                        <Grid>
+                    <ListBoxItem>
+                        <StackPanel Margin="0,5,0,0">
+                            <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
@@ -198,32 +203,39 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="21:48" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                                <Image Width="20" Height="20" Source="images/7.JPG"/>
                             </StackPanel>
                         </Grid>
+                            </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Margin="0,5,0,0">
+                    <ListBoxItem>
+                        <Border Background="#F5F5F7" CornerRadius="10">
+                        <StackPanel Margin="0,5,0,0">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
                                 <ColumnDefinition Width="70"/>
                             </Grid.ColumnDefinitions>
-
-                            <Image Grid.Column="0" Style="{StaticResource Icon}" Source="images/avatar (10).png"/>
-                            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="5,0,0,0" Background="LightGray">
+                        
+                            <Image Style="{StaticResource Icon}" Source="images/avatar (10).png"/>
+                       
+                                <StackPanel Grid.Column="1" Orientation="Vertical" Margin="5,0,0,0">
                                 <TextBlock Text="Campus Party" Margin="0,5,0,0" Style="{StaticResource Ava}"/>
                                 <TextBlock Text="Denny:Waw,almost 2,500 members"  Style="{StaticResource sub}"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="16:38" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                              
                             </StackPanel>
                         </Grid>
+                        </StackPanel>
+                        </Border>
                     </ListBoxItem>
 
-                    <ListBoxItem Margin="0,5,0,0">
-                        <Grid>
+                    <ListBoxItem>
+                        <StackPanel Margin="0,5,0,0">
+                            <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
@@ -237,12 +249,14 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="16:11" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                              
                             </StackPanel>
                         </Grid>
+                            </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Margin="0,5,0,0">
-                        <Grid>
+                    <ListBoxItem>
+                        <StackPanel Margin="0,5,0,0">
+                            <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
@@ -256,13 +270,15 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="14:50" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                                <Image Width="20" Height="20" Source="images/8.JPG"/>
                             </StackPanel>
                         </Grid>
+                            </StackPanel>
                     </ListBoxItem>
 
-                    <ListBoxItem Margin="0,5,0,0">
-                        <Grid>
+                    <ListBoxItem>
+                        <StackPanel Margin="0,5,0,0">
+                            <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
@@ -276,13 +292,15 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="14:44" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                              
                             </StackPanel>
                         </Grid>
+                            </StackPanel>
                     </ListBoxItem>
 
-                    <ListBoxItem Margin="0,5,0,0">
-                        <Grid>
+                    <ListBoxItem>
+                        <StackPanel Margin="0,5,0,0">
+                            <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
@@ -296,13 +314,15 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="14:20" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                            
                             </StackPanel>
                         </Grid>
+                            </StackPanel>
                     </ListBoxItem>
 
-                    <ListBoxItem Margin="0,5,0,0">
-                        <Grid>
+                    <ListBoxItem>
+                        <StackPanel Margin="0,5,0,0">
+                            <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
@@ -316,12 +336,14 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="11:00" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                       
                             </StackPanel>
                         </Grid>
+                            </StackPanel>
                     </ListBoxItem>
-                    <ListBoxItem Margin="0,5,0,0">
-                        <Grid>
+                    <ListBoxItem>
+                        <StackPanel Margin="0,5,0,0">
+                            <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
@@ -335,13 +357,15 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="10:34" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                              
                             </StackPanel>
                         </Grid>
+                            </StackPanel>
                     </ListBoxItem>
 
-                    <ListBoxItem Margin="0,5,0,0">
-                        <Grid>
+                    <ListBoxItem>
+                        <StackPanel Margin="0,5,0,0">
+                            <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="50*"/>
                                 <ColumnDefinition Width="160"/>
@@ -355,9 +379,10 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2" HorizontalAlignment="Right">
                                 <TextBlock Text="10:44" Margin="0,5,0,0" Style="{StaticResource sub}"/>
-                                <TextBlock Text="@"/>
+                             
                             </StackPanel>
                         </Grid>
+                            </StackPanel>
                     </ListBoxItem>
                 </ListBox>
                 <StackPanel Grid.Column="1">
@@ -406,17 +431,17 @@
                         <TextBlock Style="{StaticResource sub}" Text="16:38" Margin="0,0,5,0" HorizontalAlignment="Right"/>
                     </StackPanel>
                     </Border>
-                    <Border Grid.Row="2" Grid.Column="2" Width="260" Height="185" Background="White" CornerRadius="10,10,10,0" Margin="0,5,0,45">
+                    <Border Grid.Row="2" Grid.Column="2" Width="260" Height="180" Background="White" CornerRadius="10,10,10,0" Margin="0,5,0,45">
                         <StackPanel Orientation="Vertical">
                             <Image Source="images/tg_image_3974800999-1024x640.png" Width="270" Height="160" Stretch="UniformToFill"/>
-                            <TextBlock Text="Hold on, here it is." Margin="5,0,0,0"/>
+                            <TextBlock Style="{StaticResource text}" Text="Hold on, here it is." Margin="5,5,0,0"/>
                             <TextBlock Text="16:38" HorizontalAlignment="Right" Margin="0,-10,10,0" />
                         </StackPanel>
                     </Border>
                     <Image Grid.Row="2" Grid.Column="1" Width="25" Height="25" Source="images/avatar (7).png"  HorizontalAlignment="Right" Margin="0,130,0,0"/>
                     <Border Grid.Column="3" Grid.Row="2" Width="130" Height="50" Margin="40,0" CornerRadius="10,10,0,10"
                             Background="#EDFFD9" VerticalAlignment="Bottom" HorizontalAlignment="Left">
-                        <StackPanel Margin="2">
+                        <StackPanel Margin="3">
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="auto"/>
@@ -433,11 +458,11 @@
                         </StackPanel>
 
                             <StackPanel Grid.Column="1" Grid.Row="0" Margin="5,0,0,0">
-                            <TextBlock Text="Jessica Wood" FontSize="10"/>
-                            <TextBlock Text="Hold on, here it is." FontSize="10"/>
+                                    <TextBlock Text="Jessica Wood" FontSize="10" Foreground="#8AB87C" FontWeight="Bold"/>
+                                    <TextBlock Style="{StaticResource text}" Text="Hold on, here it is." FontSize="10"/>
                             </StackPanel>
                             <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="10"
-                                       Text="Thanks!" Margin="5,0,0,0"/>
+                                   Style="{StaticResource text}" Text="Thanks!" Margin="5,0,0,0"/>
                             <TextBlock Grid.Row="2" Grid.Column="1"
                             Text="16:38" Margin="0,-5,5,0" FontSize="10" HorizontalAlignment="Right" VerticalAlignment="Top"/>
                         </Grid>
@@ -445,8 +470,8 @@
                     </Border>
                     <Border Grid.Column="2" Grid.Row="3" Width="170" Height="35" Background="White" CornerRadius="10,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Left">
                         <StackPanel Margin="5,2,0,0">
-                            <TextBlock Text="Denny" FontSize="10"/>
-                            <TextBlock Text="Wow,almost 2,500 members!" FontSize="10"/>
+                            <TextBlock Style="{StaticResource blue}" Text="Denny" FontSize="10"/>
+                            <TextBlock  Style="{StaticResource text}" Text="Wow,almost 2,500 members!" FontSize="10"/>
                            <TextBlock Text="16:38" FontSize="10" HorizontalAlignment="Right" Margin="0,-8,5,0" VerticalAlignment="Top"/>
                         </StackPanel>
                     </Border>
@@ -459,7 +484,7 @@
                         </StackPanel>
                     </Border>
                     <Border Grid.Column="3" Grid.Row="3" Background="White" Height="30" Width="30" CornerRadius="30" HorizontalAlignment="Left" Margin="0,35,0,0">
-                        <Image Width="20" Height="20" Source="images/2.JPG" RenderOptions.BitmapScalingMode="Fant" Stretch="Fill"/>
+                        <Image Width="20" Height="20" Source="images/2.JPG" RenderOptions.BitmapScalingMode="Fant" Stretch="Uniform"/>
                     </Border>
                 </Grid>
             </Grid>
